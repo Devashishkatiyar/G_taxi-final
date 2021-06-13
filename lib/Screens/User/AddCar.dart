@@ -1,11 +1,11 @@
 import 'dart:ui';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:trackingapp/Widgets/ProgressDialog.dart';
-import 'CarProfile.dart';
+import 'package:trackingapp/Widgets/User/GlobalVariables.dart';
+import 'package:trackingapp/Widgets/User/ProgressDialog.dart';
+
 class AddCar extends StatefulWidget{
+  static const String id= "AddCar";
   @override
   State<StatefulWidget> createState() {
     return AddCarState();
@@ -53,7 +53,6 @@ class AddCarState extends State<AddCar>{
     );
   }
   @override
-  // final formKey = new GlobalKey<FormState>();
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -388,10 +387,12 @@ class AddCarState extends State<AddCar>{
                         ),
                       ),
                       onPressed: () async{
+
                         final uid= await getCurrentUID();
                         print(uid);
                         setState(() {
-                          ref.doc(uid).collection("Cars data").add(
+                          print("in set state");
+                          ref.add(
                               {
                                 'company name': companyName.text,
                                 'model name': modelName.text,
@@ -418,5 +419,5 @@ class AddCarState extends State<AddCar>{
   }
 }
 Future<String> getCurrentUID() async {
-  return await FirebaseAuth.instance.currentUser.uid;
+  return currentUserInfo.uId;
 }

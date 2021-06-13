@@ -9,13 +9,14 @@ class TaxiButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      elevation: 6,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25),
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        elevation: 6,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25),
+        ),
+        primary: bgColor,
       ),
-      color: bgColor,
-      textColor: Colors.white,
       child: Container(
         height: 50,
         child: Center(
@@ -23,7 +24,8 @@ class TaxiButton extends StatelessWidget {
             title,
             style: TextStyle(
                 fontFamily: "Brand-Bold",
-                fontSize: 20
+                fontSize: 20,
+                color: Colors.white
             ),
           ),
         ),
