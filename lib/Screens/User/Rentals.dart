@@ -5,6 +5,7 @@ import 'AddCar.dart';
 import 'CarProfile.dart';
 
 class Rentals extends StatefulWidget{
+  static const String id= "Rentals";
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -39,7 +40,7 @@ class RentalsState extends State<Rentals>{
                           color: Colors.black87,),),
                       SizedBox(width: MediaQuery.of(context).size.width-160,),
                       FloatingActionButton(onPressed: (){
-                        Navigator.push(context,MaterialPageRoute(builder: (context)=> AddCar()));
+                        Navigator.pushNamed(context, AddCar.id);
                       },
                         tooltip: "Press to add your Car",
                         elevation: 20.0,
@@ -76,9 +77,12 @@ class RentalsState extends State<Rentals>{
                   ),
                   SizedBox(height:70),
                   StreamBuilder(
-                      stream: getDataStreamSnapshots(context),
+                      stream: ref.snapshots(),
                       builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
-                        return ListView.builder
+                        if (snapshot.connectionState == ConnectionState.waiting) {
+                          return CircularProgressIndicator();
+                        }
+                        else return ListView.builder
                           (
                             physics: NeverScrollableScrollPhysics(),
                             scrollDirection: Axis.vertical,
@@ -210,6 +214,6 @@ class RentalsState extends State<Rentals>{
   }
   Stream<QuerySnapshot> getDataStreamSnapshots(BuildContext context) async*{
     final uid = await getCurrentUID();
-    yield* ref.doc(uid).collection("Cars data").snapshots();
+    yield* FirebaseFirestore.instance.collection("Cars data").snapshots();
   }
 }

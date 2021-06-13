@@ -3,11 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:trackingapp/DataModels/Prediction.dart';
 import 'package:trackingapp/DataProviders/AppData.dart';
 import 'package:trackingapp/Helpers/RequestHelper.dart';
-import 'package:trackingapp/Widgets/GlobalVariables.dart';
-import 'package:trackingapp/Widgets/PredictionTile.dart';
+import 'package:trackingapp/Widgets/User/GlobalVariables.dart';
+import 'package:trackingapp/Widgets/User/PredictionTile.dart';
 import 'package:trackingapp/brand_colors.dart';
 
 class SearchPage extends StatefulWidget {
+  static const String id= "SearchPage";
   const SearchPage({Key key}) : super(key: key);
 
   @override

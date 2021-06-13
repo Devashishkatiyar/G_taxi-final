@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CarProfile extends StatefulWidget{
+  static const String id= "CarProfile";
 
   String companyName;
   String modelName;
