@@ -1,5 +1,5 @@
 
-# G Taxi Application - test
+# G Taxi Application
 
 An application which will connect local taxi drivers,cabs..etc & rental services on a common platform. 
 
