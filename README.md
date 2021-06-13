@@ -1,7 +1,9 @@
 
 # G Taxi Application
 
+
 An application which will connect local taxi drivers,cabs..etc & rental services on a common platform. 
+
 
 <img src="https://user-images.githubusercontent.com/62808343/121771334-5cefa000-cb8c-11eb-9534-5ee5a75d6699.png" width="158">
 
@@ -19,6 +21,7 @@ An application which will connect local taxi drivers,cabs..etc & rental services
 
 
 * *We have two diffrent differnt dashboards for user and driver.*
+* 
 
 
 * *Driver's profile will be screened on the basis of information provided by him and will be activated within 24-48 Hours*
@@ -71,14 +74,12 @@ An application which will connect local taxi drivers,cabs..etc & rental services
 # Demo Videos of Application
 
 
-
-
 | Used End  | Driver End |
 | ------------- | ------------- |
 |||
 |||
 |||
-|![Click here to view video](https://user-images.githubusercontent.com/62808343/121804451-15d4de00-cc64-11eb-96d6-02edcf4aa1a0.mp4)| ![Click here to view video](https://user-images.githubusercontent.com/62808343/121798396-a818ba00-cc43-11eb-84bc-e4ef3ce66ae9.mp4)  |
+|![Click here to view Video](https://user-images.githubusercontent.com/62808343/121804451-15d4de00-cc64-11eb-96d6-02edcf4aa1a0.mp4)| ![Click here to view Video](https://user-images.githubusercontent.com/62808343/121798396-a818ba00-cc43-11eb-84bc-e4ef3ce66ae9.mp4)  |
 
 
 
